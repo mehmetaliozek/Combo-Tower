@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0eb7c43e5e4c4d743aa71d845d9ce37b
+guid: cc3f05cebcec1664eaae377b1792a3b0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -989274499703301144
-    second: obada_0
+      213: 5688822178732394706
+    second: grass_texture_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -46,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: obada_0
+      name: grass_texture_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 142
-        height: 94
+        width: 650
+        height: 360
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8eb15db75146542f0800000000000000
-      internalID: -989274499703301144
+      spriteID: 2d845b181a1c2fe40800000000000000
+      internalID: 5688822178732394706
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      obada_0: -989274499703301144
+      grass_texture_0: 5688822178732394706
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

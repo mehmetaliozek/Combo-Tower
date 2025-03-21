@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Archer Room
       objectReference: {fileID: 0}
+    - target: {fileID: 3565260016957644126, guid: 03877dfa055f0cf4ebaa0633e22eb02c, type: 3}
+      propertyPath: range
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6574231829375414915, guid: 03877dfa055f0cf4ebaa0633e22eb02c, type: 3}
       propertyPath: m_Sprite
       value: 
