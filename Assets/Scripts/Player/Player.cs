@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -27,6 +28,12 @@ public class Player : MonoBehaviour
 
     [SerializeField]
     private float health = 100000;
+
+    private float playerExp = 0;
+    private float requeriredExp = 12;
+    private int playerLevel = 0;
+    [SerializeField] private Image expBarUI;
+    [SerializeField] private GameObject bodyDesigner;
 
     private void Awake()
     {
@@ -74,11 +81,29 @@ public class Player : MonoBehaviour
             foot.transform.localPosition = r.transform.localPosition + Vector3.down;
             minMinusY -= 1;
         }
+
+        bodyDesigner.SetActive(false);
+        Time.timeScale = 1;
     }
 
     public void TakeDamage(float damage)
     {
         health -= damage;
         //Debug.Log(health);
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.transform.CompareTag("Exp")) {
+            playerExp += 5;
+            if(playerExp >= requeriredExp) {
+                playerExp = 0f;    
+                playerLevel++; 
+                bodyDesigner.SetActive(true);
+                Time.timeScale = 0; 
+            }
+            expBarUI.fillAmount = playerExp/requeriredExp;
+            Destroy(collision.gameObject);
+        }
     }
 }
