@@ -25,6 +25,9 @@ public class Player : MonoBehaviour
     private int minPlusY = 0;
     private int minMinusY = -1;
 
+    [SerializeField]
+    private float health = 100000;
+
     private void Awake()
     {
         if (Instance == null)
@@ -71,5 +74,11 @@ public class Player : MonoBehaviour
             foot.transform.localPosition = r.transform.localPosition + Vector3.down;
             minMinusY -= 1;
         }
+    }
+
+    public void TakeDamage(float damage)
+    {
+        health -= damage;
+        //Debug.Log(health);
     }
 }
