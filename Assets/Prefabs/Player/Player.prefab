@@ -34,6 +34,7 @@ Transform:
   - {fileID: 8276535945790498276}
   - {fileID: 6281780229207980199}
   - {fileID: 3995971065227905674}
+  - {fileID: 5595827258200566885}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &2518627764352844198
@@ -59,9 +60,9 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 2
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &1272112409505589239
 MonoBehaviour:
@@ -80,6 +81,9 @@ MonoBehaviour:
   foot: {fileID: 4297104581416629753}
   rb: {fileID: 2518627764352844198}
   speed: 5
+  health: 100000
+  expBarUI: {fileID: 0}
+  bodyDesigner: {fileID: 0}
 --- !u!1 &2848541181859235194
 GameObject:
   m_ObjectHideFlags: 0
@@ -246,6 +250,56 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &4581075815797980004
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5595827258200566885}
+  - component: {fileID: 7055389525264156258}
+  m_Layer: 0
+  m_Name: EnemySpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5595827258200566885
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4581075815797980004}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3213419677172230388}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7055389525264156258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4581075815797980004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc8defad2c3e96648b7b7289e5034729, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 4219067188407069105, guid: 9be36cfa4cb7a814c890905460a75fa7, type: 3}
+  spawnCooldown: 3
+  spawnerLevel: 0
+  levelUpCooldown: 20
+  numberOfEnemiesToSpawn: 5
+  radius: 15
 --- !u!1 &6646491800054610590
 GameObject:
   m_ObjectHideFlags: 0
