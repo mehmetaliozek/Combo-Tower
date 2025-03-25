@@ -748,6 +748,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bodyDesigner: {fileID: 1399547820}
+  currentState: 0
+  gameTimer: 0
+  gameMaxTime: 300
 --- !u!4 &1410434201
 Transform:
   m_ObjectHideFlags: 0
@@ -974,7 +977,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4581075815797980004, guid: 5b1e131952ad92d429f6d176c6b2293d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7055389525264156258, guid: 5b1e131952ad92d429f6d176c6b2293d, type: 3}
       propertyPath: spawnCooldown

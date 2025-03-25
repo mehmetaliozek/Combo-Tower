@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -43,9 +44,13 @@ public class GameManager : MonoBehaviour
                 }
             break;
             case GameState.WIN:
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                Debug.Log("WIN");
                 Time.timeScale = 0;
             break;
             case GameState.LOSE:
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                Debug.Log("LOSE");
                 Time.timeScale = 0;
             break;
             default:
