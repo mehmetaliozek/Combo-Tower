@@ -8,6 +8,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -617386334335308157, guid: 03877dfa055f0cf4ebaa0633e22eb02c, type: 3}
+      propertyPath: range
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -617386334335308157, guid: 03877dfa055f0cf4ebaa0633e22eb02c, type: 3}
+      propertyPath: damage
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -617386334335308157, guid: 03877dfa055f0cf4ebaa0633e22eb02c, type: 3}
+      propertyPath: attackRate
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2553597269368339331, guid: 03877dfa055f0cf4ebaa0633e22eb02c, type: 3}
       propertyPath: m_Name
       value: Archer Room
@@ -63,5 +75,29 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2553597269368339331, guid: 03877dfa055f0cf4ebaa0633e22eb02c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2032773610351591295}
   m_SourcePrefab: {fileID: 100100000, guid: 03877dfa055f0cf4ebaa0633e22eb02c, type: 3}
+--- !u!1 &3444013550053268081 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2553597269368339331, guid: 03877dfa055f0cf4ebaa0633e22eb02c, type: 3}
+  m_PrefabInstance: {fileID: 917515224369979890}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2032773610351591295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3444013550053268081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d149382c05773de4798edb87762facac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrow: {fileID: 1094857728210707551, guid: 96e985bcdc2aebe4895c8fd46adad60f, type: 3}
+  enemyLayerMask:
+    serializedVersion: 2
+    m_Bits: 64

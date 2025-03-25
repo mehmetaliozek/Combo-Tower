@@ -8,6 +8,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -617386334335308157, guid: 03877dfa055f0cf4ebaa0633e22eb02c, type: 3}
+      propertyPath: range
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: -617386334335308157, guid: 03877dfa055f0cf4ebaa0633e22eb02c, type: 3}
+      propertyPath: damage
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -617386334335308157, guid: 03877dfa055f0cf4ebaa0633e22eb02c, type: 3}
+      propertyPath: attackRate
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2553597269368339331, guid: 03877dfa055f0cf4ebaa0633e22eb02c, type: 3}
       propertyPath: m_Name
       value: Caster Room
@@ -63,5 +75,32 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2553597269368339331, guid: 03877dfa055f0cf4ebaa0633e22eb02c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -5843050671679502939}
   m_SourcePrefab: {fileID: 100100000, guid: 03877dfa055f0cf4ebaa0633e22eb02c, type: 3}
+--- !u!1 &7509483028424706901 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2553597269368339331, guid: 03877dfa055f0cf4ebaa0633e22eb02c, type: 3}
+  m_PrefabInstance: {fileID: 5424366024265773270}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-5843050671679502939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7509483028424706901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09b2dbbebaf02b842bc744794ed91c78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 27217918251911886, guid: 91375850ba30d464aa945e89b4e5457c, type: 3}
+  projectileCount: 8
+  projectileData:
+    direction: {x: 0, y: 0}
+    speed: 5
+    currentlifeTime: 3.5
+    damage: 0

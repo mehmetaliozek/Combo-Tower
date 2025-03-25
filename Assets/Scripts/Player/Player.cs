@@ -52,7 +52,7 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.linearVelocity = new Vector2(x, y) * speed;
+        rb.linearVelocity = (new Vector2(x, y).normalized) * speed;
     }
 
     private void Turn()
@@ -95,7 +95,7 @@ public class Player : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.transform.CompareTag("Exp")) {
-            playerExp += 5;
+            playerExp += 15;
             if(playerExp >= requeriredExp) {
                 playerExp = 0f;    
                 playerLevel++; 
