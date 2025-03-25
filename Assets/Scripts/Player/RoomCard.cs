@@ -57,6 +57,14 @@ public class RoomCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         BodyDesigner.Instance.ClickedRoomCard = this;
     }
 
+    private void OnEnable()
+    {
+        dragImage.gameObject.SetActive(false);
+        dragImageRectTransform.SetParent(originalParent);
+        dragImageRectTransform.anchoredPosition = image.GetComponent<RectTransform>().anchoredPosition;
+    }
+
     public Room GetRoom() => room;
     public Sprite GetRoomSprite() => image.sprite;
+
 }

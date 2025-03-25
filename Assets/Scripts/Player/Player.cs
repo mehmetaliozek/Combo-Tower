@@ -48,6 +48,10 @@ public class Player : MonoBehaviour
         x = Input.GetAxis("Horizontal");
         y = Input.GetAxis("Vertical");
         Turn();
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            bodyDesigner.SetActive(!bodyDesigner.activeInHierarchy);
+        }
     }
 
     private void FixedUpdate()
@@ -95,7 +99,7 @@ public class Player : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.transform.CompareTag("Exp")) {
-            playerExp += 15;
+            playerExp += 3;
             if(playerExp >= requeriredExp) {
                 playerExp = 0f;    
                 playerLevel++; 

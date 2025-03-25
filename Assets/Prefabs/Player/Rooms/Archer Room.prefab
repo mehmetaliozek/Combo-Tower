@@ -18,7 +18,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -617386334335308157, guid: 03877dfa055f0cf4ebaa0633e22eb02c, type: 3}
       propertyPath: attackRate
-      value: 2.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2553597269368339331, guid: 03877dfa055f0cf4ebaa0633e22eb02c, type: 3}
       propertyPath: m_Name

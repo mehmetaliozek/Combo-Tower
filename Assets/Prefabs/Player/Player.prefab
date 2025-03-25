@@ -81,7 +81,7 @@ MonoBehaviour:
   foot: {fileID: 4297104581416629753}
   rb: {fileID: 2518627764352844198}
   speed: 5
-  health: 100000
+  health: 100
   expBarUI: {fileID: 0}
   bodyDesigner: {fileID: 0}
 --- !u!1 &2848541181859235194
