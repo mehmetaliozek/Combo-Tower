@@ -89,7 +89,9 @@ public class Player : MonoBehaviour
     public void TakeDamage(float damage)
     {
         health -= damage;
-        //Debug.Log(health);
+        if(health <= 0) {
+            GameManager.Instance.currentState = GameManager.GameState.LOSE;
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -97,7 +99,8 @@ public class Player : MonoBehaviour
         if(collision.transform.CompareTag("Exp")) {
             playerExp += 5;
             if(playerExp >= requeriredExp) {
-                playerExp = 0f;    
+                playerExp = 0f;
+                requeriredExp += 15;    
                 playerLevel++; 
                 bodyDesigner.SetActive(true);
                 Time.timeScale = 0; 
