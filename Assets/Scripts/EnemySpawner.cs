@@ -14,7 +14,7 @@ public class EnemySpawner : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -26,7 +26,8 @@ public class EnemySpawner : MonoBehaviour
             levelUpTimer = 0;
         }
         spawnTimer += Time.deltaTime;
-        if(spawnTimer >= spawnCooldown) {
+        if (spawnTimer >= spawnCooldown)
+        {
             spawnTimer = 0;
             for(int i = 0; i < numberOfEnemiesToSpawn; i++) {
                 var angle = i * Mathf.PI / numberOfEnemiesToSpawn * 2;
