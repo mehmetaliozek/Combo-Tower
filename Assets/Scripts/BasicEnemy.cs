@@ -14,7 +14,8 @@ public class BasicEnemy : MonoBehaviour
     }
     void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, Player.Instance.transform.position, moveSpeed * Time.deltaTime);
+        //transform.position = Vector3.MoveTowards(transform.position, Player.Instance.transform.position, moveSpeed * Time.deltaTime);
+        GetComponent<Rigidbody2D>().linearVelocity = ( Player.Instance.transform.position - transform.position).normalized * moveSpeed;
     }
 
     void OnCollisionStay2D(Collision2D collision)
