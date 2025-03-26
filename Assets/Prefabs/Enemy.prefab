@@ -104,7 +104,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 2
   health: 10
+  levelHealthModifier: 3
   experienceObject: {fileID: 5038840817009981130, guid: a9ab91bf863758540a7a7bbde99d835e, type: 3}
+  damage: 5
+  levelDamageModifier: 1.5
   attackCooldown: 1
 --- !u!58 &8726988315735156314
 CircleCollider2D:
