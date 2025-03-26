@@ -91,3 +91,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc8defad2c3e96648b7b7289e5034729, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemy: {fileID: 0}
+  spawnCooldown: 5
+  spawnerLevel: 0
+  levelUpCooldown: 30
+  numberOfEnemiesToSpawn: 5
+  radius: 15

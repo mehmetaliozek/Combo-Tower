@@ -1754,6 +1754,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7055389525264156258, guid: 5b1e131952ad92d429f6d176c6b2293d, type: 3}
+      propertyPath: radius
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7055389525264156258, guid: 5b1e131952ad92d429f6d176c6b2293d, type: 3}
       propertyPath: spawnCooldown
       value: 10
       objectReference: {fileID: 0}
