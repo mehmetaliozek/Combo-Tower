@@ -27,12 +27,14 @@ public class Player : MonoBehaviour
     private int minMinusY = -1;
 
     [SerializeField]
-    private float health = 100000;
+    private float health = 100;
+    private float maxHealth = 100;
 
     private float playerExp = 0;
     private float requeriredExp = 12;
     private int playerLevel = 0;
     [SerializeField] private Image expBarUI;
+    [SerializeField] private Image healthBarUI;
     [SerializeField] private GameObject bodyDesigner;
 
     private void Awake()
@@ -93,6 +95,7 @@ public class Player : MonoBehaviour
     public void TakeDamage(float damage)
     {
         health -= damage;
+        healthBarUI.fillAmount = health / maxHealth;
         if(health <= 0) {
             GameManager.Instance.currentState = GameManager.GameState.LOSE;
         }
