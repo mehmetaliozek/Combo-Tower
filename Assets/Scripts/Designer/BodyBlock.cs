@@ -31,6 +31,8 @@ public class BodyBlock : MonoBehaviour, IDropHandler, IPointerClickHandler
         }
     }
 
+    public Room room;
+
     public void OnDrop(PointerEventData eventData)
     {
         RoomCard roomCard = eventData.pointerDrag.GetComponent<RoomCard>();
@@ -51,6 +53,8 @@ public class BodyBlock : MonoBehaviour, IDropHandler, IPointerClickHandler
             image.color = Color.white;
             isDroppable = false;
             BodyDesigner.Instance.DroppableActivator(position.x, position.y);
+            room = roomCard.GetRoom();
+            BodyDesigner.Instance.CheckForCombos(room, position.x, position.y);
             Player.Instance.AddRoom(roomCard.GetRoom(), position.x, position.y, BodyDesigner.Instance.ConstraintCount);
         }
     }

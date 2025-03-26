@@ -18,7 +18,7 @@ public class Room : MonoBehaviour
 
     private Collider2D[] hits;
 
-    private IAttack attack;
+    public IAttack attack;
 
     private void Start()
     {

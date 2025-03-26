@@ -75,7 +75,7 @@ public class BodyDesigner : MonoBehaviour
     {
         foreach (var roomCard in roomCards)
         {
-            // TODO: Oda sayýsý artýnca tekrarsýz dizi yarat
+            // TODO: Oda sayï¿½sï¿½ artï¿½nca tekrarsï¿½z dizi yarat
             roomCard.Initialize(rooms[Random.Range(0, rooms.Count)]);
         }
     }
@@ -101,6 +101,26 @@ public class BodyDesigner : MonoBehaviour
     {
         if (x + 1 < constraintCount)
             bodyBlocks[x + 1, y].IsDroppable = true;
+        if (x - 1 >= 0)
+            bodyBlocks[x - 1, y].IsDroppable = true;
+        if (y + 1 < constraintCount)
+            bodyBlocks[x, y + 1].IsDroppable = true;
+        if (y - 1 >= 0)
+            bodyBlocks[x, y - 1].IsDroppable = true;
+    }
+
+    public void CheckForCombos(Room room, int x, int y)
+    {
+                    Debug.Log(room.GetType().Name);
+
+        if (x + 1 < constraintCount)
+            if (bodyBlocks[x + 1, y].room != null)
+            {
+
+                if (bodyBlocks[x + 1, y].room.attack.GetType().Name == room.attack.GetType().Name)
+                {
+                }
+            }
         if (x - 1 >= 0)
             bodyBlocks[x - 1, y].IsDroppable = true;
         if (y + 1 < constraintCount)
