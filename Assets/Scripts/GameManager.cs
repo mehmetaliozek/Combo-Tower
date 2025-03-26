@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
     }
 
     private void Start() {
+        Time.timeScale = 1;
         currentState = GameState.GAMEPLAY;
     }
 
@@ -66,8 +67,6 @@ public class GameManager : MonoBehaviour
     }
 
     public void RestartGame() {
-        Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-
     }
 }
