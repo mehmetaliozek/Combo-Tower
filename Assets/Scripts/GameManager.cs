@@ -1,5 +1,7 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,7 +10,11 @@ public class GameManager : MonoBehaviour
     public GameObject bodyDesigner;
     public GameState currentState;
     public float gameTimer = 0;
-    public float gameMaxTime = 300;
+    public float gameMaxTime = 30;
+    public GameObject gameoverUI;
+    public TextMeshProUGUI gameoverText;
+    public Image gameplayTimerUI;
+    
     public enum GameState {
         GAMEPLAY,
         WIN,
@@ -39,22 +45,29 @@ public class GameManager : MonoBehaviour
         {
             case GameState.GAMEPLAY:
                 gameTimer += Time.deltaTime;
+                gameplayTimerUI.fillAmount = gameTimer/gameMaxTime;
                 if(gameTimer >= gameMaxTime) {
                     currentState = GameState.WIN;
                 }
             break;
             case GameState.WIN:
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-                Debug.Log("WIN");
+                gameoverUI.SetActive(true);
+                gameoverText.text = "victory";
                 Time.timeScale = 0;
             break;
             case GameState.LOSE:
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-                Debug.Log("LOSE");
+                gameoverUI.SetActive(true);
+                gameoverText.text = "defeat";
                 Time.timeScale = 0;
             break;
             default:
             break;
         }
+    }
+
+    public void RestartGame() {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
     }
 }
