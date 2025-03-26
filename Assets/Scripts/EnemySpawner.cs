@@ -23,6 +23,7 @@ public class EnemySpawner : MonoBehaviour
         levelUpTimer += Time.deltaTime;
         if(levelUpTimer >= levelUpCooldown) {
             numberOfEnemiesToSpawn += 3;
+            spawnerLevel++;
             levelUpTimer = 0;
         }
         spawnTimer += Time.deltaTime;
@@ -36,7 +37,8 @@ public class EnemySpawner : MonoBehaviour
 
                 var pos = new Vector3(transform.position.x + x, transform.position.y + y,0);
 
-                Instantiate(enemy, pos, transform.rotation);
+                GameObject spawnedEnemy = Instantiate(enemy, pos, transform.rotation);
+                spawnedEnemy.GetComponent<BasicEnemy>().UpgradeStats(spawnerLevel);
             }
         }
     }

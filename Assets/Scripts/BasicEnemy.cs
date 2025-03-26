@@ -4,7 +4,10 @@ public class BasicEnemy : MonoBehaviour
 {
     public float moveSpeed = 2f;
     public float health = 10f;
+    public float levelHealthModifier = 3;
     public GameObject experienceObject;
+    public float damage = 5;
+    public float levelDamageModifier = 2;
     private float attackTimer = 0;
     public float attackCooldown = 1;
 
@@ -26,7 +29,7 @@ public class BasicEnemy : MonoBehaviour
             if (attackTimer >= attackCooldown)
             {
                 attackTimer = 0;
-                player.TakeDamage(1);
+                player.TakeDamage(damage);
                 //oyuncuya hasar verme kodu çağır;
             }
         }
@@ -46,5 +49,10 @@ public class BasicEnemy : MonoBehaviour
     {
         Instantiate(experienceObject, transform.position, transform.rotation);
         Destroy(gameObject);
+    }
+
+    public void UpgradeStats(int level) {
+        health += level * levelHealthModifier;
+        damage += level * levelDamageModifier;
     }
 }
