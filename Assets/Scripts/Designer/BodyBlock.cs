@@ -54,7 +54,7 @@ public class BodyBlock : MonoBehaviour, IDropHandler, IPointerClickHandler
             isDroppable = false;
             BodyDesigner.Instance.DroppableActivator(position.x, position.y);
             room = roomCard.GetRoom();
-            BodyDesigner.Instance.CheckForCombos(room, position.x, position.y);
+            //BodyDesigner.Instance.CheckForCombos(room, position.x, position.y);
             Player.Instance.AddRoom(roomCard.GetRoom(), position.x, position.y, BodyDesigner.Instance.ConstraintCount);
         }
     }

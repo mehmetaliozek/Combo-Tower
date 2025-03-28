@@ -10,6 +10,7 @@ public class BasicEnemy : MonoBehaviour
     public float levelDamageModifier = 2;
     private float attackTimer = 0;
     public float attackCooldown = 1;
+    public GameObject damagePopup;
 
     void Start()
     {
@@ -38,7 +39,8 @@ public class BasicEnemy : MonoBehaviour
     public void DamageEnemy(float amount)
     {
         health -= amount;
-        Debug.Log(health);
+        GameObject popupObject = Instantiate(damagePopup, transform.position, Quaternion.identity);
+        popupObject.GetComponent<DamagePopup>().SetMessage(amount.ToString());
         if (health <= 0)
         {
             KillSelf();
